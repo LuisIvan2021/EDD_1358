@@ -1,0 +1,110 @@
+import csv
+
+resultados=[]
+with open('presenciaredes.csv', newline='') as File:
+    reader = csv.DictReader(File)
+    for row in reader:
+            resultados.append(row)
+
+c=resultados[7]['JUNIO']
+d=resultados[7]['ENERO']
+a=c.replace(",","")
+b=d.replace(",","")
+diferenciaTwitter= int(a) - int(b)
+print("La diferencia de seguidores en Enero a Junio en Twitter fue de ", diferencia_Twitter)
+
+print("""
+Meses
+1.- Enero
+2.- Febrero
+3.- Marzo
+4.- Abril
+5.- Mayo
+6.- Junio
+        """)
+e=int(input("Elija un mes : "))
+if e == 1:
+    f=resultados[15]['ENERO']
+    g=f.replace(",","")
+    h="Enero"
+elif e == 2:
+    f=resultados[15]['FEBRERO']
+    g=f.replace(",","")
+    h="Febrero"
+elif e == 3:
+    f=resultados[15]['MARZO']
+    g=f.replace(",","")
+    h="Marzo"
+elif e == 4:
+    f=resultados[15]['ABRIL']
+    g=f.replace(",","")
+    h="Abril"
+elif e == 5:
+    f=resultados[15]['MAYO']
+    g=f.replace(",","")
+    h="Mayo"
+elif e == 6:
+    f=resultados[15]['JUNIO']
+    g=f.replace(",","")
+    h="Junio"
+i=int(input("Elija otro mes : "))
+if i != e:
+    if i == 1:
+        j=resultados[15]['ENERO']
+        k=j.replace(",","")
+        l="Enero"
+    elif i == 2:
+        j=resultados[15]['FEBRERO']
+        k=j.replace(",","")
+        l="Febrero"
+    elif i == 3:
+        j=resultados[15]['MARZO']
+        k=j.replace(",","")
+        l="Marzo"
+    elif i == 4:
+        j=resultados[15]['ABRIL']
+        k=j.replace(",","")
+        l="Abril"
+    elif i == 5:
+        j=resultados[15]['MAYO']
+        k=j.replace(",","")
+        l="Mayo"
+    elif i == 6:
+        j=resultados[15]['JUNIO']
+        k=j.replace(",","")
+        l="Junio"
+    diferencia = int(k) - int(g)
+    print("La diferencia de visualizaciones en Youtube de el mes {0} al mes {1} es de {2}".format(h,l,diferencia))
+else:
+    print("La diferecia es de 0")
+
+a1=resultados[1]['ENERO']
+a2=resultados[1]['FEBRERO']
+a3=resultados[1]['MARZO']
+a4=resultados[1]['ABRIL']
+a5=resultados[1]['MAYO']
+a6=resultados[1]['JUNIO']
+b1=resultados[8]['ENERO']
+b2=resultados[8]['FEBRERO']
+b3=resultados[8]['MARZO']
+b4=resultados[8]['ABRIL']
+b5=resultados[8]['MAYO']
+b6=results[8]['JUNIO']
+f1=a1.replace(",","")
+f2=a2.replace(",","")
+f3=a3.replace(",","")
+f4=a4.replace(",","")
+f5=a5.replace(",","")
+f6=a6.replace(",","")
+t1=b1.replace(",","")
+t2=b2.replace(",","")
+t3=b3.replace(",","")
+t4=b4.replace(",","")
+t5=b5.replace(",","")
+t6=b6.replace(",","")
+fa3=float((int(f1)+int(f2)+int(f3)+int(f4)+int(f5)+int(f6))/6)
+tw3=float((int(t1)+int(t2)+int(t3)+int(t4)+int(t5)+int(t6))/6)
+print("El promedio de cremiento en Facebook en el intervalo del mes de Enero a Junio fue de ", fa3)
+print("El promedio de crecimiento en Twitter en el intervalo del mes de Enero a Junio fue de ", tw3)
+
+print("Final del programa")
