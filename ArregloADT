@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+
+public class ArregloADT {
+    //atributos
+    private int tamano;
+    private int t;
+    private String elementos;
+    private ArrayList datos;
+    //constructores
+    public ArregloADT(int tamano){
+        this.tamano = t;
+        datos = new ArrayList();
+        for(int x=0; x<t; x++){
+            datos.add((elementos)new Object());
+        }
+    public void int getlongitud(){
+        System.out.println("Los elementos de la lista son: "+lista.length);
+    }
+    public void setElementos(int indice, elementos){
+        if(indice>=0 && indice<this.tamano){
+            datos.set(indice, elementos);
+        }
+    }   
+    public void getElementos(int indice){
+        if(indice>=0 && indice<this.tamano){
+            datos.get(indice);
+        }  
+    }
+    public void limpiar(){
+        if(int i =0; i<tamano;i++){
+            datos.set(i, null);
+        }
+    }
+    @Override
+  public String toString() {
+    return "hola";
+  }
+}
